@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dev1-306014",
+  "private_key_id": "d7d93a4d6c37f18823acc076ef05dd7cca8f3712",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCoYA+OsU5wMlBB\nTb1k9pEf56IQPIqRtVnAwgEuBw1I4BXJs1YUdy2m78DN6qdbLlsY/gF+4sjRFeob\n/CXLrfS8RBAR6GVHrltokmT92tewrKItI8nrWJAzEk4sGSaZTi/bSEgLlWKl1g43\nUOjz84akRf8ofcyhF+O2eEPEIl+WxDe9/1j2reN4h5TCgOB9HzjcbPGgwOoADpXS\nzf8ZeSaB/rEsNSs21d9p+iDJ1+aviKj/llcbXv4LkuWrA8s0RlLW5f6B1xZfy18U\n2WLra06rXMQj1j0cVLIPY5aTKvwBvFGXMifUa5cXyfVD/d2Dhw69XWWtZQ9xPu3r\nv3HKUjx/AgMBAAECggEAEnHHcoGreTCXHbg8ODxRudWAKYLVnnrnv0JhVQnyY2/M\nuIuGhqJm5APH3VFzDigoqYxgXJEk9NE6PouOFl79fBwr8yeVOgIjGEmlJNvdcd36\nEV4mHJEB5t5T+uexv0HTOJRqnqjkJWIqrNZBAUGa7RGP5H8iCemZ3nS+iP9Hn7Zm\n5GMynsTRAcf/LjO5CHl7m1cHCr3fB9wFK22h9r2Nujyc2Rd++30E6PHFi+Xvz3V/\nQnWU0oSWMFIFxJ8upO0PewyIWtxKKAto6FYYEUnsvIZO3vriyiJdIFqUBxeV2cQJ\noJ6fQD67UG53mQC/b/Mt34aepZHWwBBxoIN3bi2w0QKBgQDloZR54qguIhZQUljq\nBCCt6lztranwqK8UByZhCOgmfXLpkquH2aOGO6Ra1XtjJIlW2DXOvHqV5cu8n7g2\n4MJqAMWJIW+NTbAzeHZrEmtotjOQnVv5LX8hXTYZaVmc1fn3F/iYLMSvljuleqn6\naycnzmbAkMS4Hb1KLQeFNiLHLwKBgQC7tcC1KBgwBJ+T19BFAokRbs9So4hCDZlq\nb1jnle3wlD0T7QnDZeW4q6IkiISg4ECasPE4SJdGiuMALhUEmxS8H1byz1t89WeJ\nBaUqhFcQrbqdiM3YhCfZsAfnJBcxkBI6GGx39uLkX8n3um8MnmNLxN/gbGIwPFzn\ngQmSn+CLsQKBgQCoHT+CbHoMLFCBxYfq69KxAN+/8mB0HErxMrraV5b+duFmN0b1\nUlTxtUCCb8DBuMIDno7mJ/7nNzGNirFnG+25hY8Y8i2lGbdiN1Ma2IViR+JAgbQQ\nHUrxtjghKou80rsKN7Z8Umo80pQgdklzWHd2IRoA6Pvcf4lRgN38nMGhaQKBgQCJ\np89Lyrx6MlnIdQMCKMrWIvodc1nQfuKcIE4Ff3j/7eYgv7tiNU7TL+L3gboptGsM\nRmiPywRNMjsofaLiPsxk7WK5LAG+0MT9wksOtACZdZ4eOx4iA0CqLqKNCnWL3kjP\nm+unykE4E1sstecMTPcqsJUxoqobD5leGM4pXd+w8QKBgQDYcvy4hUmZM0kdaLxN\nXsX5OQqFum+V0obDHVRaXTWEsUO9PiIiCFHaBkqGYF5r1+YwpreRkipl1EVOBPff\ngOKczMPmjgy3Foi2zlF0JHSkwL4DIDa+aVqBdRPnQAJZ+gGTOuy1KhKBGtBRsrtZ\n877RqW3tcCDVWXUELvQODGlCBw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "animetography@dev1-306014.iam.gserviceaccount.com",
+  "client_id": "115752164013656016440",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/animetography%40dev1-306014.iam.gserviceaccount.com"
+}
