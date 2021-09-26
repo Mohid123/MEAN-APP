@@ -1,0 +1,25 @@
+<!-- <app-header></app-header> -->
+<div [formGroup]="postForm" class="container" *ngIf="!post">
+<form [formGroup]="postForm" (ngsubmit)="updateBlogSubmit()" enctype="multipart/form-data">
+  <!-- Title Field -->
+  <div class="form-group">
+    <label for="title">Title</label>
+    <!-- Title Input -->
+    <input type="text" name="postTitle" placeholder="Blog Title" class="form-control" formControlName="postTitle">
+  </div>
+
+  <!-- Body Field -->
+  <div class="form-group">
+  	<ckeditor formControlName="postContent" name="postContent" [editor]="editor" [config]="config"></ckeditor>
+  </div>
+<!-- Go Back Button -->
+  <a routerLink="/blog-preview" class="btn btn-warning" style="margin-top: 5%; margin-right: 4px;">Cancel</a>
+  <!-- Save Changes Button -->
+  <button type="submit" (click)="updateBlogSubmit()" class="btn btn-info" style="margin-top: 5%;">Save Changes</button>
+
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>

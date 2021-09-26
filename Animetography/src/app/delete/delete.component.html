@@ -1,0 +1,21 @@
+<!-- Modal Confirmation Window -->
+<div class="modal mat-elevation-z8" fxLayout="column wrap" fxLayoutAlign="center center">
+  <div class="modal-content mat-elevation-z8">
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h1 class="modal-title" id="modal-basic-title">DELETE THIS POST!</h1>
+      <button type="button" name="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="modal-body">
+    	<p>No Going back from this. You Absolutely Sure??</p>
+    	<br>
+    	<button type="button" name="button" class="btn btn-danger btn-lg" (click)="deletePost()">Yes, Delete This Post</button>
+      <!-- No Button -->
+      <a routerLink="/blog-preview"><button type="button" name="button" class="btn btn-primary btn-lg">No, Go Back</button></a>
+    </div>
+ 
+  </div>
+
+</div>

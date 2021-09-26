@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+// @import "~@angular/material/prebuilt-themes/purple-green.css";
+@include mat-core();
+@import '../node_modules/font-awesome/scss/font-awesome';
+@import url(https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap);
+@import '~ngx-sharebuttons/themes/default/default-theme';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; width: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; width: 100%; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

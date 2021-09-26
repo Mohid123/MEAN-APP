@@ -1,0 +1,78 @@
+//@import '../../../node_modules/font-awesome/scss/font-awesome';
+@import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
+@import 'https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap';
+
+
+.footer {
+  font-family: 'Permanent Marker', sans-serif;
+  background-image: radial-gradient(circle at center, #899Dc4, #495D84);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+}
+
+.img-responsive {
+  width: auto;
+  height: auto;
+  max-width: 250px;
+  max-height: 40px;
+  margin-top: 20%;
+}
+
+.list-group {
+  font-family: 'Dosis', sans-serif;
+  list-style-type: none;
+  margin-top: 4%; 
+  //color: #fff!important;
+}
+
+.list-item {
+  background-color: #fff!important;
+  border-radius: 8px;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.contact {
+  color: white;
+  margin-top: 2%;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+.btn-twitter{
+	color:#fff!important;
+	background-color:#55acee!important;
+	transition: 0.2s;
+  margin-right: 1em;
+  margin-left: 6em;
+	&:hover {
+		transform: scale(1.2) translateY(-10px);
+	}
+}
+.btn-mail{
+	color:#fff!important;
+	background-color:magenta!important;
+	transition: 0.2s;
+  font-family: 'Roboto';
+	&:hover {
+		transform: scale(1.2) translateY(-10px);
+	}
+}
+
+.copy {
+  color: floralwhite;
+  font-size: 16px;
+  margin-top: 8%;
+  font-family: 'Dosis', sans-serif;
+}
+

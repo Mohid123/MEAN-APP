@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div fxLayout="column wrap" fxLayoutAlign="space-evenly center">
+  <h1>Add Image</h1>
+  <hr />
+<form [formGroup]="form" (submit)="onSubmit()">
+  <div>
+    <input formControlName="name" type="text" placeholder="Enter name..." />
+  </div>
+  <div>
+    <input (change)="onFileSelect($event)" type="file" />
+  </div>
+  <div *ngIf="imageData">
+    <img [src]="imageData" [alt]="form.value.name" />
+  </div>
+  <div>
+    <button class="btn btn-success" type="submit">Add Image</button>
+  </div>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>

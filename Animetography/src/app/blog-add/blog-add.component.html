@@ -1,0 +1,39 @@
+<app-header></app-header>
+<body>
+  <div [formGroup]="postForm" class="container" *ngIf="post">
+        <h1 class="mb-4">New blog post</h1>
+
+        <form [formGroup]="postForm" (ngsubmit)="onBlogSubmit()" enctype="multipart/form-data" method="post">
+            <div class="form-group">
+
+                <label for="postImgUrl">Image</label>
+                <input formControlName="postImgUrl" type="text" class="form-control"  name="image" required>
+            </div>
+
+            <div class="form-group">
+
+                <label for="title">Title</label>
+                <input formControlName="postTitle" type="text" class="form-control" placeholder="Title" name="postTitle" required>
+            </div>
+
+            <div class="form-group">
+
+                <label for="author">Author</label>
+                <input formControlName="postAuthor" type="text" class="form-control" placeholder="Author" name="postAuthor" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <ckeditor formControlName="postContent" name="postContent" [editor]="editor" [config]="config"></ckeditor>
+            </div>
+            <br>
+            <div class="form-group">
+                <a routerLink="/blog-preview" class="btn btn-warning">Cancel</a>
+                <button type="submit" class="btn btn-primary" (click)="onBlogSubmit()">Save</button>
+            </div>
+        </form>
+    </div>
+  </body>
+  <br>
+<br>
+<br>
+<br>

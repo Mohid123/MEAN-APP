@@ -1,0 +1,74 @@
+<app-header></app-header>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <h1 class="ml2">Image Gallery</h1>
+</div>
+<br>
+<!-- <div fxLayout="row wrap" fxLayoutAlign="center center">
+  <p class="ml3">An Archive of some beautiful, some memorable and some forgotten shots from Anime</p>  
+</div> -->
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.9)" size = "large" color = "#ec1010" type = "ball-atom" [fullScreen] = "true"><p style="color: white" > Loading Images... </p></ngx-spinner>
+
+<div *ngIf="images?.length > 0" fxLayout="row wrap">
+
+<swiper
+    [autoHeight]="true"
+    [grabCursor]="true"
+    [spaceBetween]="10"
+    [centeredSlides]="true"
+    [slidesPerView]="'auto'"
+    [navigation]="true"
+    [parallax]="true"
+    [pagination]="{
+      clickable: true
+    }"
+    [thumbs]="{ swiper: thumbsSwiper }"
+    class="mySwiper2"
+  >
+    <ng-template *ngFor="let image of images; let i = index; let last = first;" swiperSlide>
+      <img [src]="image.avatar" [alt]="image.name">
+      <div data-swiper-parallax="-100">
+        <p class="desc">{{image.name}}</p>
+      </div>
+    </ng-template>
+  </swiper>
+
+  <swiper
+      (swiper)="thumbsSwiper = $event"
+      [spaceBetween]="10"
+      [slidesPerView]="6"
+      [freeMode]="true"
+      [watchSlidesProgress]="true"
+      class="mySwiper"
+    >
+      <ng-template *ngFor="let image of images; let i = index; let last = first;" swiperSlide>
+        <img [src]="image.avatar" [alt]="image.name">
+      </ng-template>
+    </swiper>
+</div>
+<br>
+<br>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <a style="margin-left: 0.5em;"><button type="button" class="btn btn-dark" (click)="open(content)"><i class="fa fa-share-alt"></i></button></a>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h1 class="modal-title" id="modal-basic-title">Share!</h1>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <share-buttons [show]="5"></share-buttons>
+  </div>
+</ng-template>
+
+<app-footer></app-footer>

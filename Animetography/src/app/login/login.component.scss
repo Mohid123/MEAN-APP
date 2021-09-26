@@ -1,0 +1,89 @@
+@import 'https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap';
+body {
+	background-image: url('../../assets/bg.png');
+	height: 110vh;
+	z-index: -1;
+	background-size: cover;
+     overflow-x: hidden; 
+}
+
+.row {
+     padding-top: 3%;
+     margin-left: 2%;
+     margin-right: 2%;
+     font-family: 'Dosis', sans-serif;
+     font-weight: 1000;
+     max-width: 100%;
+     margin-bottom: 0%;
+ }
+
+ .page {
+     margin-top: 0%;
+ }
+
+ .btn {
+     border-radius: 25px;
+     width: 80%;
+     margin-top: 2%
+ }
+
+ .sign {
+     border-radius: 25px;
+     width: 25%;
+     margin: auto;
+ }
+ form {
+     padding: 0;
+     margin-left: 15%;
+     font-weight: 800;
+ }
+
+ .abc {
+     background-color: #004d40;
+     padding: 2%;
+     margin: auto;
+     color: floralwhite;
+ }
+
+ .xyz {
+     padding: 2%;
+ }
+
+ .form-control {
+     width: 80%;
+     border-radius: 25px;
+ }
+
+ .fa {
+     color: white;
+     margin-top: 5%;
+ }
+
+ .in {
+     color: floralwhite;
+     margin-right: 100%;
+ }
+
+ .in2 {
+     color: #495057;
+     margin-right: auto;
+ }
+
+ .my {
+     border: none;
+ }
+
+ .custom-control {
+     margin-bottom: 2%;
+ }
+
+ h2.account-text {
+     color: #fff !important;
+     font-weight: 500;
+ }
+
+ .account-description {
+     color: #fff;
+     margin-bottom: 4%;
+     font-weight: 500;
+ }
