@@ -4,7 +4,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 import { ImageService } from '../Services/image.service';
 import { Gallery } from "../post/gallery";
 import { Subscription } from "rxjs";
-import { expand } from '../animations/app.animation';
+import { flyinout } from '../animations/app.animation';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { SwiperComponent } from "swiper/angular";
 import SwiperCore, {
@@ -23,11 +23,11 @@ declare var anime: any;
    templateUrl: './archive.component.html',
    styleUrls: ['./archive.component.scss'],
    host: {
-    '[@expand]': 'true',
+    '[@flyinout]': 'true',
     'style': 'display: block;'
   },
   animations: [
-  expand()
+  flyinout()
   ],
   encapsulation: ViewEncapsulation.None
  })
