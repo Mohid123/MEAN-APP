@@ -57,7 +57,7 @@ Following are some key development features of the website:
 #### FRONT-END:
 
 - [Angular 2+](https://angular.io/) is used for handling the front end requests, connection with db, routing, dependency injection and responsive templates.
-- [Angular Material](https://material.angular.io/) to handle the front end design, color, themes and logic.
+- [Angular Material](https://material.angular.io/) to handle the front end design, color and themes etc.
 - [Angular Flex Layout](https://tburleson-layouts-demos.firebaseapp.com/#/docs) to handle the layout, responsiveness and UX of the website.
 - [Ng Bootstrap](https://ng-bootstrap.github.io/#/home) to handle some basic UI features like navbar etc.
 - [RxJS](https://rxjs.dev/guide/overview) library for creating asynchronous Services for HTTP methods and REST API callbacks.
