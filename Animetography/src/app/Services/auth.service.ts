@@ -61,8 +61,10 @@ export class AuthService {
   }
 
   public logout() {
-  	this.authToken = null;
-  	this.user = null;
-  	localStorage.clear();
+    if (localStorage.id_token == undefined ){
+      this.authToken = null;
+    	this.user = null;
+    	localStorage.clear();
+    }
   }
 }

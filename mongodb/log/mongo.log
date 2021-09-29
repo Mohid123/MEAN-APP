@@ -1,0 +1,68 @@
+{"t":{"$date":"2021-03-11T19:10:29.860+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-03-11T19:10:30.161+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-03-11T19:10:30.165+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-03-11T19:10:30.192+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-03-11T19:10:30.195+05:00"},"s":"I",  "c":"CONTROL",  "id":23299,   "ctx":"main","msg":"Error connecting to the Service Control Manager: {windows_GetErrMsg_err}","attr":{"windows_GetErrMsg_err":"Access is denied. (5)"}}
+
+{"t":{"$date":"2021-03-11T19:12:17.284+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-03-11T19:12:17.734+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-03-11T19:12:17.738+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-03-11T19:12:17.738+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-03-11T19:12:17.738+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-03-11T19:12:17.739+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2021-03-12T16:22:31.888+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-03-12T16:22:31.890+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-03-12T16:22:32.418+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-03-12T16:22:32.418+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-03-12T16:22:32.418+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-03-12T16:22:32.419+05:00"},"s":"I",  "c":"CONTROL",  "id":23299,   "ctx":"main","msg":"Error connecting to the Service Control Manager: {windows_GetErrMsg_err}","attr":{"windows_GetErrMsg_err":"Access is denied. (5)"}}
+
+{"t":{"$date":"2021-03-12T16:23:35.846+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-03-12T16:23:36.334+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-03-12T16:23:36.337+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-03-12T16:23:36.337+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-03-12T16:23:36.337+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-03-12T16:23:36.338+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2021-03-13T17:13:57.041+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-03-13T17:13:57.075+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-03-13T17:13:58.556+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-03-13T17:13:58.557+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-03-13T17:13:58.557+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-03-13T17:13:58.557+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2021-03-16T00:01:34.752+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-03-16T00:01:36.575+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-03-16T00:01:36.831+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-03-16T00:01:36.834+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-03-16T00:01:36.864+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-03-16T00:01:36.865+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2021-03-22T13:27:14.175+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-03-22T13:27:15.135+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-03-22T13:27:15.309+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-03-22T13:27:15.311+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-03-22T13:27:15.347+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-03-22T13:27:15.348+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2021-04-06T17:08:27.135+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-04-06T17:08:27.212+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-04-06T17:08:28.593+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-04-06T17:08:28.595+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-04-06T17:08:28.626+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-04-06T17:08:28.627+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2021-05-22T17:43:40.857+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-05-22T17:43:41.409+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-05-22T17:43:41.411+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-05-22T17:43:41.412+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-05-22T17:43:41.412+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-05-22T17:43:41.420+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2021-08-23T14:28:54.288+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2021-08-23T14:29:06.520+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2021-08-23T14:29:09.258+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2021-08-23T14:29:09.260+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2021-08-23T14:29:09.425+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
+{"t":{"$date":"2021-08-23T14:29:09.452+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
