@@ -3,8 +3,6 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const multer = require('multer');
-const {GridFsStorage} = require('multer-gridfs-storage');
-const Grid = require('gridfs-stream');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
@@ -67,6 +65,7 @@ app.use(cookieParser());
 
 //static files access
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(process.cwd() + '../../Animetography/dist/Animetography/')));
 
 app.use('/public', express.static(path.join('public')));
 
@@ -89,6 +88,11 @@ require('./config/passport')(passport);
 
 
 //routes
+
+app.get('/', (req,res) => {
+  res.sendFile(process.cwd() + "../../Animetography/dist/Animetography/index.html")
+});
+
 
 app.use('/users', require('./routes/users')); //main route users which will lead to register and login etc.
 app.use('/blogs', require('./routes/users'));

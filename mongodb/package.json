@@ -1,7 +1,7 @@
 {
   "name": "mongodb",
   "version": "1.0.0",
-  "description": "Sevrver Set up for the Angular APP",
+  "description": "Server Set up for the Angular APP",
   "main": "server.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node server",
