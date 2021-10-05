@@ -19,7 +19,7 @@ export class AuthService {
 
 	authToken: any;
   user: any;
-	public baseUri: string = 'http://localhost:3000/users';
+	public baseUri: string = 'http://localhost:3000/api/users';
 	public headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }

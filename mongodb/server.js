@@ -90,13 +90,13 @@ require('./config/passport')(passport);
 //routes
 
 app.get('/', (req,res) => {
-  res.sendFile(process.cwd() + "../../Animetography/dist/Animetography/index.html")
+  res.sendFile(path.resolve("../Animetography/dist/Animetography/index.html"))
 });
 
 
-app.use('/users', require('./routes/users')); //main route users which will lead to register and login etc.
-app.use('/blogs', require('./routes/users'));
-app.use('/gallery', require('./routes/users'));
+app.use('/api/users', require('./routes/users')); //main route users which will lead to register and login etc.
+app.use('/api/blogs', require('./routes/users'));
+app.use('/api/gallery', require('./routes/users'));
 
 //port number we use
 const port = 3000;

@@ -1,5 +1,5 @@
 {
-  "name": "mongodb",
+  "name": "Animetography",
   "version": "1.0.0",
   "description": "Server Set up for the Angular APP",
   "main": "server.js",

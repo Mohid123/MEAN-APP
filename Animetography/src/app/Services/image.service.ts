@@ -19,7 +19,7 @@ export class ImageService {
     const imageData = new FormData();
     imageData.append("name", name);
     imageData.append("image", image, name);
-    this.http.post<{ gallery: Gallery }>('http://localhost:3000/gallery/archive', imageData)
+    this.http.post<{ gallery: Gallery }>('http://localhost:3000/api/gallery/archive', imageData)
       .subscribe((imageData) => {
         const gallery: Gallery = {
           _id: imageData.gallery._id,
@@ -33,12 +33,12 @@ export class ImageService {
   }
 
   getImage(id): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/gallery/archive/'+ id);
+    return this.http.get<any>('http://localhost:3000/api/gallery/archive/'+ id);
   }
 
   getImages() {
     this.http
-      .get<{ images: Gallery[] }>('http://localhost:3000/gallery/archive')
+      .get<{ images: Gallery[] }>('http://localhost:3000/api/gallery/archive')
       .pipe(
         map((imageData) => {
           return imageData.images;

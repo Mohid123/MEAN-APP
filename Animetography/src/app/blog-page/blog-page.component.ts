@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { PostService } from "../Services/post.service";
 import { AuthService } from "../Services/auth.service";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -21,7 +21,7 @@ import { Post } from '../post/post';
   // flyinout()
   // ]
 })
-export class BlogPageComponent implements OnInit {
+export class BlogPageComponent implements OnInit, AfterViewInit {
   Loading = false;
   closeResult = '';
   searchText;
@@ -48,7 +48,10 @@ export class BlogPageComponent implements OnInit {
     private flashMessage: FlashMessagesService,
     private activatedRoute: ActivatedRoute,
     private spinner: NgxSpinnerService) {
+  }
 
+  ngAfterViewInit():void {
+    
     this.spinner.show();
 
      setTimeout(() => {
