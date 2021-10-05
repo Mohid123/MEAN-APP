@@ -2,6 +2,7 @@
   "name": "Animetography",
   "version": "1.0.0",
   "description": "Server Set up for the Angular APP",
+  "homepage": ".",
   "main": "server.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node server",
