@@ -62,5 +62,5 @@ Following are some key development features of the website:
 - [Ng Bootstrap](https://ng-bootstrap.github.io/#/home) to handle some basic UI features like navbar etc.
 - [RxJS](https://rxjs.dev/guide/overview) library for creating asynchronous Services for HTTP methods and REST API callbacks.
 - [Font Awesome](https://fontawesome.com/) for icons.
-- Other front end technolofies used include [SwiperJS](https://swiperjs.com/) gallery, Material Carousel, ShareIconsModule, Custom Page-to Page Animations and transitions, AuthGuards (for admin privileges) and animated preloaders etc.
+- Other front end technologies used include [SwiperJS](https://swiperjs.com/) gallery, Material Carousel, ShareIconsModule, Custom Page-to Page Animations and transitions, AuthGuards (for admin privileges) and animated preloaders etc.
 
