@@ -20,8 +20,8 @@ export class PostService {
   post: any;
   public posts: Post[] = [];
   private posts$ = new Subject<Post[]>();
-  public baseUri: string = "http://localhost:3000/api/blogs";
-  public imageUri: string = "http://localhost:3000/api/gallery/archive/";
+  public baseUri: string = "https://animetography-blog.com/api/blogs";
+  public imageUri: string = "https://animetography-blog.com/api/gallery/archive/";
   public headers = new HttpHeaders().set('key', 'value');
 
   constructor(private http: HttpClient) {}

@@ -19,7 +19,7 @@ export class AuthService {
 
 	authToken: any;
   user: any;
-	public baseUri: string = 'http://localhost:3000/api/users';
+	public baseUri: string = 'https://animetography-blog.com/api/users';
 	public headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
@@ -61,10 +61,8 @@ export class AuthService {
   }
 
   public logout() {
-    if (localStorage.id_token == undefined ){
       this.authToken = null;
     	this.user = null;
     	localStorage.clear();
-    }
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from '../Services/post.service';
-import { FlashMessagesService } from 'angular2-flash-messages';
+import { Toast, ToastrService } from 'ngx-toastr';
 import { Post } from '../post/post';
 
 @Component({
@@ -21,7 +21,7 @@ export class DeleteComponent implements OnInit {
   	private activatedRoute: ActivatedRoute,
     private postService: PostService,
     private router: Router,
-    private flashMessage: FlashMessagesService) { }
+    private toast: ToastrService) { }
 
   ngOnInit(): void {
   	this.currentUrl = this.activatedRoute.snapshot.params;
@@ -42,11 +42,11 @@ export class DeleteComponent implements OnInit {
 
     deletePost() {
     	this.postService.deletePost(this.currentUrl.id).subscribe(data => {
-    		this.flashMessage.show('Blog Deleted Successfully', {cssClass: 'alert-success', timeout: 3000});
+    		this.toast.success('Post Deleted Successfully', 'Delete Post');
     		this.router.navigate(['/blog-preview']);
     	},
     	error => {
-    		this.flashMessage.show('Something Went Wrong', {cssClass: 'alert-danger', timeout: 3000});
+    		this.toast.error('Something Went Wrong', 'Delete Post');
     	});
     }
 

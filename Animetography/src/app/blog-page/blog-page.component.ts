@@ -1,9 +1,10 @@
-import { Component, OnInit, AfterViewInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { PostService } from "../Services/post.service";
+import { ViewportScroller } from '@angular/common';
 import { AuthService } from "../Services/auth.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { FlashMessagesService } from 'angular2-flash-messages';
+//import { FlashMessagesService } from 'angular2-flash-messages';
 import { NgxSpinnerService } from "ngx-spinner";
 import * as Editor from '../ckeditor5/build/ckeditor';
 import { Post } from '../post/post';
@@ -21,7 +22,13 @@ import { Post } from '../post/post';
   // flyinout()
   // ]
 })
-export class BlogPageComponent implements OnInit, AfterViewInit {
+export class BlogPageComponent implements OnInit {
+
+  pageYoffset = 0;
+  @HostListener('window:scroll', ['$event']) onScroll(event){
+    this.pageYoffset = window.pageYOffset;
+  }
+
   Loading = false;
   closeResult = '';
   searchText;
@@ -45,18 +52,9 @@ export class BlogPageComponent implements OnInit, AfterViewInit {
     private authService: AuthService,
     private router: Router,
     private modalService: NgbModal,
-    private flashMessage: FlashMessagesService,
     private activatedRoute: ActivatedRoute,
+    private scroll: ViewportScroller,
     private spinner: NgxSpinnerService) {
-  }
-
-  ngAfterViewInit():void {
-    
-    this.spinner.show();
-
-     setTimeout(() => {
-      this.spinner.hide();
-    }, 5000);
   }
 
   ngOnInit(): void {
@@ -81,15 +79,19 @@ export class BlogPageComponent implements OnInit, AfterViewInit {
 
   }
 
+  scrollToTop(){
+    this.scroll.scrollToPosition([0,0]);
+}
+
   getPostbyId(id: any) {
+    this.spinner.show();
     this.postService.getPost(id).subscribe((data: any) => {
        this.post = data;
        this.post.id = data._id;
        window.scrollTo(0, 0);
-       console.log(this.post);
+       this.spinner.hide();
       });
   }
-
 
 
 // FOR MODAL

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../Services/post.service';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FlashMessagesService } from 'angular2-flash-messages';
+import { ToastrService } from 'ngx-toastr';
 import * as Editor from '../ckeditor5/build/ckeditor';
 import { CloudinaryUnsigned } from 'puff-puff/CKEditor';
 
@@ -26,7 +26,7 @@ export class BlogAddComponent implements OnInit {
   constructor(private postService: PostService,
   	private formBuilder: FormBuilder,
   	private router: Router,
-  	private flashMessage: FlashMessagesService) {
+  	private toast: ToastrService) {
   }
 
   ngOnInit(): void {
@@ -115,11 +115,11 @@ export class BlogAddComponent implements OnInit {
   onBlogSubmit() {
     this.postService.addPost(this.postForm.value).subscribe(
         data => {     
-            this.flashMessage.show('Blog Submitted Successfully', {cssClass: 'alert-success', timeout: 3000});
+            this.toast.success('Blog Submitted Successfully', 'New Post');
             this.router.navigate(['/blog-preview']);
         },
         error => {
-            this.flashMessage.show('Something Went Wrong', {cssClass: 'alert-danger', timeout: 3000});
+            this.toast.error('Something Went Wrong', 'New Post');
         }
     );
   }

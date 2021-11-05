@@ -1,95 +1,82 @@
 <app-header></app-header>
 
-<mat-carousel
-  timings="500ms ease-in"
-  [autoplay]="true"
-  [interval]="3000"
-  color="accent"
-  maxWidth="auto"
-  [proportion]="43"
-  [slides]="6"
-  [loop]="true"
-  [hideArrows]="false"
-  [hideIndicators]="false"
-  [useMouseWheel]="false"
-  orientation="ltr">
-  <mat-carousel-slide
-    *ngFor="let slide of slides; let i = index"
-    [image]="slide.image"
-    [hideOverlay]="false">
-    <div *ngFor="let text of slides;" style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
-      <h1 class="car-head">{{slide.text}}</h1>
-    </div>
-  </mat-carousel-slide>
+<ngx-spinner bdColor="rgba(0,0,0)" size="medium" color="#0087d3" type="line-scale-pulse-out" [fullScreen]="true">
+    <p style="color: white"> Loading Blogs... </p>
+</ngx-spinner>
+
+<mat-carousel timings="500ms ease-in" [autoplay]="true" [interval]="3000" color="accent" maxWidth="auto" [proportion]="43" [slides]="6" [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useMouseWheel]="false" orientation="ltr">
+    <mat-carousel-slide *ngFor="let slide of slides; let i = index" [image]="slide.image" [hideOverlay]="false">
+
+        <div *ngFor="let text of slides;" style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+            <h1 class="car-head">{{slide.text}}</h1>
+        </div>
+    </mat-carousel-slide>
 </mat-carousel>
 
 <form class="example-form">
-  <mat-form-field color="accent" class="example-full-width" appearance="fill" hintLabel="Enter upto 12 characters">
-    <mat-label style="font-size: 1.1em;">Search For a Post 
-      <i class="fa fa-search fa-lg"></i>
-      <br>
-    </mat-label>
-    <input type="text"    
-           placeholder="Search/Filter by Post Title"
-           [(ngModel)]="searchText"
-           [ngModelOptions]="{standalone: true}"
-           matInput
-           #input maxlength="8">
-           <mat-hint align="end">{{input.value?.length || 0}}/12</mat-hint>
-  </mat-form-field>
+    <mat-form-field color="accent" class="example-full-width" appearance="fill" hintLabel="Enter upto 20 characters">
+        <mat-label style="font-size: 1.1em;">Search For a Post
+            <i class="fa fa-search fa-lg"></i>
+            <br>
+        </mat-label>
+        <input type="text" placeholder="Filter by Post Title" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" matInput #input maxlength="20">
+        <mat-hint align="end">{{input.value?.length || 0}}/20</mat-hint>
+    </mat-form-field>
 </form>
 
-<ngx-spinner bdColor = "rgba(0,0,0)" size = "medium" color = "#0087d3" type = "line-scale-pulse-out" [fullScreen] = "true"> <p style="color: white" > Loading Blogs... </p></ngx-spinner>
+<div fxLayout="row wrap" fxLayoutAlign="center center">
 
-<div *ngFor="let post of posts | filter:searchText" fxLayout="column wrap" fxLayoutAlign="space-evenly center" class="main mat-elevation-z8">
+    <div *ngFor="let post of posts | filter:searchText" fxLayout="column wrap" fxLayoutAlign="center center" class="main mat-elevation-z8">
 
-  <div class="panel-image">
-    <a class="link" [routerLink]="['/blog-page/', post._id]">
-      <img class="panel-img" src="{{post.postImgUrl}}">
-    </a>
-  </div>
+        <div class="panel-image">
+            <img class="panel-img" src="{{post.postImgUrl}}">
+        </div>
 
-  <div class="panel-heading">
-    <a class="link" [routerLink]="['/blog-page/', post._id]">
-      <h1 class="panel-title">{{post.postTitle}}</h1>
-    </a>
-  </div>
-  <br>
-  <div class="panel-author">
-    <strong>Posted by: </strong> {{post.postAuthor}}
-  </div>
-  <br>
-  <br>
-  <div class="panel-author">
-    <strong>Posted On: </strong> {{ post.created | date:'MMMM d, y' }}
-  </div>
-  <br>
-  <br>
+        <div class="panel-heading">
+            <a class="link" [routerLink]="['/blog-page/', post._id]">
+                <h1 class="panel-title">{{post.postTitle}}</h1>
+            </a>
+        </div>
+        <br>
+        <div class="panel-author">
+            <strong>Posted by: </strong> {{post.postAuthor}}
+        </div>
+        <br>
+        <br>
+        <div class="panel-author">
+            <strong>Posted On: </strong> {{ post.created | date:'MMMM d, y' }}
+        </div>
+        <br>
+        <br>
 
-  <div class="panel-body">
-    <!-- <p>{{ post.postContent.length > 400 ? post.postContent.substring(0, 500)+"..." : post.postContent }}</p> -->
+        <div class="panel-body">
+            <!-- <p>{{ post.postContent.length > 400 ? post.postContent.substring(0, 500)+"..." : post.postContent }}</p> -->
 
-      <!-- <app-read-more [text]="post.postContent" [maxLength]="30"></app-read-more> -->
-    <!-- <ckeditor [disabled]="true" [editor]="editor" [data]="post.postContent.length > 400 ? post.postContent.substring(0, 500)+'...' : post.postContent"></ckeditor> -->
-    <span [innerHTML]="post.postContent.length > 300 ? post.postContent.substring(0, 400)+'...' : post.postContent"></span>
-  </div>
-  <br>
-  <a [routerLink]="['/blog-page/', post._id]">
-      <button type="button" name="button" class="btn btn-info btn-lg">
-        <img src="assets/reading-book.png" width="32" height="30"> Continue Reading
-      </button>
-    </a>
+            <!-- <app-read-more [text]="post.postContent" [maxLength]="30"></app-read-more> -->
+            <!-- <ckeditor [disabled]="true" [editor]="editor" [data]="post.postContent.length > 400 ? post.postContent.substring(0, 500)+'...' : post.postContent"></ckeditor> -->
+            <span [innerHTML]="post.postContent.length > 300 ? post.postContent.substring(0, 400)+'...' : post.postContent"></span>
+        </div>
+        <br>
+        <a [routerLink]="['/blog-page/', post._id]">
+            <button type="button" name="button" class="btn btn-info btn-lg">
+          <img src="assets/reading-book.png" width="32" height="30"> Continue Reading
+        </button>
+        </a>
 
-  <div class="editorial">
+        <div class="editorial">
 
-    <a [routerLink]="['/blog-edit/', post._id]" *ngIf="username === post.postAuthor"><button type="button" name="button" class="btn btn-info" style="margin-right: 0.5em;"><i class="fa fa-edit fa-lg"></i></button></a>
+            <a [routerLink]="['/blog-edit/', post._id]" *ngIf="username === post.postAuthor"><button type="button" name="button" class="btn btn-info" style="margin-right: 0.5em;"><i class="fa fa-edit fa-lg"></i></button></a>
 
-    <a [routerLink]="['/delete-post/', post._id]" *ngIf="username === post.postAuthor"><button type="button" class="btn btn-danger"><i class="fa fa-trash fa-lg"></i></button></a>
+            <a [routerLink]="['/delete-post/', post._id]" *ngIf="username === post.postAuthor"><button type="button" class="btn btn-danger"><i class="fa fa-trash fa-lg"></i></button></a>
 
-    <!-- <a style="margin-left: 0.5em;"><button type="button" class="btn btn-light last"><i class="fa fa-gratipay fa-lg"></i></button></a> -->
+            <!-- <a style="margin-left: 0.5em;"><button type="button" class="btn btn-light last"><i class="fa fa-gratipay fa-lg"></i></button></a> -->
 
-    <a style="margin-left: 0.5em;"><button type="button" class="btn btn-dark" (click)="open(content)"><i class="fa fa-share-alt"></i></button></a>
-  </div>
+            <a style="margin-left: 0.5em;"><button type="button" class="btn btn-dark" (click)="open(content)"><i class="fa fa-share-alt"></i></button></a>
+        </div>
+    </div>
+
+    <!--  <a class="twitter-timeline" data-width="400" data-height="900" data-theme="dark" href="https://twitter.com/AniMohid?ref_src=twsrc%5Etfw">Twitter Feed</a> -->
+
 </div>
 
 <!-- <div fxLayout="coulmn wrap" fxLayoutAlign="end center">
@@ -97,16 +84,22 @@
 </div>
 <br> -->
 
+<div fxLayout="row" fxLayoutAlign="end center" style="margin-bottom: 10px;">
+    <button mat-fab class="btn btn-info mat-elevation-z8" (click)="scrollToTop()" *ngIf="pageYoffset > 0">
+    <i class="fa fa-arrow-up fa-lg"></i>
+  </button>
+</div>
+
 <ng-template #content let-modal>
-  <div class="modal-header">
-    <h1 class="modal-title" id="modal-basic-title">Share This Post!</h1>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <div class="modal-header">
+        <h1 class="modal-title" id="modal-basic-title">Share Posts!</h1>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
-  </div>
-  <div class="modal-body">
-    <share-buttons [show]="5"></share-buttons>
-  </div>
+    </div>
+    <div class="modal-body">
+        <share-buttons [show]="5"></share-buttons>
+    </div>
 </ng-template>
 
 <app-footer></app-footer>

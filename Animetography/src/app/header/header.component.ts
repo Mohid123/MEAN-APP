@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../Services/auth.service';
 import { PostService } from "../Services/post.service";
 import { Router } from '@angular/router';
-import { FlashMessagesService } from 'angular2-flash-messages';
+import { ToastrService } from 'ngx-toastr';
 declare var anime: any;
 
 @Component({
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    private flashMessage: FlashMessagesService,
+    private toast: ToastrService,
     private postService: PostService,
     private router: Router) { }
 
@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
 
   onLogoutClick() {
     this.authService.logout();
-    this.flashMessage.show('You are logged out', {cssClass: 'alert-success', timeout: 2000});
+    this.toast.warning('Log Out', 'You are logged out');
     this.router.navigate(['login']);
     return false;
   }

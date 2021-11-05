@@ -1,12 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 import { PostService } from "../Services/post.service";
 import { AuthService } from "../Services/auth.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 import { MatCarouselSlide, MatCarouselSlideComponent } from '@ngmodule/material-carousel';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { FlashMessagesService } from 'angular2-flash-messages';
 import { NgxSpinnerService } from "ngx-spinner";
+import { ToastrService } from 'ngx-toastr';
 import * as Editor from '../ckeditor5/build/ckeditor';
 import { Observable, Subscription } from 'rxjs';
 import { expand } from '../animations/app.animation';
@@ -24,6 +25,11 @@ import { expand } from '../animations/app.animation';
   ]
 })
 export class BlogPreviewComponent implements OnInit {
+
+  pageYoffset = 0;
+  @HostListener('window:scroll', ['$event']) onScroll(event){
+    this.pageYoffset = window.pageYOffset;
+  }
 
   Loading = false;
   closeResult = '';
@@ -50,9 +56,10 @@ export class BlogPreviewComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private modalService: NgbModal,
-    private flashMessage: FlashMessagesService,
+    private toast: ToastrService,
     private activatedRoute: ActivatedRoute,
-    private spinner: NgxSpinnerService) { }
+    private spinner: NgxSpinnerService,
+    private scroll: ViewportScroller) { }
 
   ngOnInit(): void {
 
@@ -65,6 +72,7 @@ export class BlogPreviewComponent implements OnInit {
       },
       err => {
         console.log(err);
+        this.toast.warning('Blog Posts', 'Posts Not Found')
         return false;
       });
 
@@ -73,9 +81,13 @@ export class BlogPreviewComponent implements OnInit {
       this.username = profile.user.username;
     });
 
-    // (<any>window).twttr.widgets.load();
+    //(<any>window).twttr.widgets.load();
 
   }
+
+  scrollToTop(){
+    this.scroll.scrollToPosition([0,0]);
+}
 
 
   open(content) {

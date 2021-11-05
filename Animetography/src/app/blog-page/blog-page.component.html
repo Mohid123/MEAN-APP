@@ -1,54 +1,64 @@
-<ngx-spinner bdColor = "rgba(0,0,0)" size = "medium" color = "#00b9ff" type = "ball-climbing-dot" [fullScreen] = "true"><p style="color: white" > Reading Time... </p> </ngx-spinner>
-
 <app-header></app-header>
 
-<div *ngIf="post" fxLayout="column wrap" fxLayoutAlign="space-evenly center" class="main mat-elevation-z8">
-  <div class="panel-image">
-    <img class="panel-img" src="{{post.postImgUrl}}">
-  </div>
-  <div class="panel-heading">
-    <h1 class="panel-title">{{post.postTitle}}</h1>
-  </div>
-  <br>
-  <div class="panel-author">
-    <strong>Posted by: </strong> {{post.postAuthor}}
-  </div>
-  <br>
-  <br>
-  <div class="panel-author">
-    <strong>Posted On: </strong> {{ post.created | date:'MMMM d, y' }}
-  </div>
-  <br>
-  <br>
+<ngx-spinner bdColor="rgba(0,0,0)" size="medium" color="#00b9ff" type="ball-climbing-dot" [fullScreen]="true">
+    <p style="color: white"> Reading Time... </p>
+</ngx-spinner>
 
-  <div class="panel-body">
-    <!-- <app-read-more [text]="post.postContent" [maxLength]="90" class="responsive-img"></app-read-more> -->
-    <!-- <span [innerHTML]="post.postContent"></span> -->
-    <ckeditor [disabled]="true" [editor]="editor" [(ngModel)]="post.postContent"></ckeditor>
-  </div>
+<div fxLayout="column wrap" fxLayoutAlign="center center">
+    <div *ngIf="post" fxLayout="column wrap" fxLayoutAlign="center center" class="main mat-elevation-z8">
+        <div class="panel-image">
+            <img class="panel-img" src="{{post.postImgUrl}}">
+        </div>
+        <div class="panel-heading">
+            <h1 class="panel-title">{{post.postTitle}}</h1>
+        </div>
+        <br>
+        <div class="panel-author">
+            <strong>Posted by: </strong> {{post.postAuthor}}
+        </div>
+        <br>
+        <br>
+        <div class="panel-author">
+            <strong>Posted On: </strong> {{ post.created | date:'MMMM d, y' }}
+        </div>
+        <br>
+        <br>
 
-  <div class="editorial">
+        <div class="panel-body">
+            <!-- <app-read-more [text]="post.postContent" [maxLength]="90" class="responsive-img"></app-read-more> -->
+            <!-- <span [innerHTML]="post.postContent"></span> -->
+            <ckeditor [disabled]="true" [editor]="editor" [(ngModel)]="post.postContent"></ckeditor>
+        </div>
 
-    <a [routerLink]="['/blog-edit/', post.id]" *ngIf="username === post.postAuthor"><button type="button" name="button" class="btn btn-info" style="margin-right: 0.5em;"><i class="fa fa-edit fa-lg"></i></button></a>
+        <div class="editorial">
 
-    <a [routerLink]="['/delete-post/', post.id]" *ngIf="username === post.postAuthor"><button type="button" class="btn btn-danger"><i class="fa fa-trash fa-lg"></i></button></a>
+            <a [routerLink]="['/blog-edit/', post.id]" *ngIf="username === post.postAuthor"><button type="button" name="button" class="btn btn-info" style="margin-right: 0.5em;"><i class="fa fa-edit fa-lg"></i></button></a>
 
-    <!-- <a style="margin-left: 0.5em;"><button type="button" class="btn btn-light last"><i class="fa fa-gratipay fa-lg"></i></button></a> -->
+            <a [routerLink]="['/delete-post/', post.id]" *ngIf="username === post.postAuthor"><button type="button" class="btn btn-danger"><i class="fa fa-trash fa-lg"></i></button></a>
 
-    <a style="margin-left: 0.5em;"><button type="button" class="btn btn-dark" (click)="open(content)"><i class="fa fa-share-alt"></i></button></a>
-  </div>
+            <!-- <a style="margin-left: 0.5em;"><button type="button" class="btn btn-light last"><i class="fa fa-gratipay fa-lg"></i></button></a> -->
+
+            <a style="margin-left: 0.5em;"><button type="button" class="btn btn-dark" (click)="open(content)"><i class="fa fa-share-alt"></i></button></a>
+        </div>
+    </div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="end center" style="margin-bottom: 10px;">
+    <button mat-fab class="btn btn-info mat-elevation-z8" (click)="scrollToTop()" *ngIf="pageYoffset > 0">
+    <i class="fa fa-arrow-up fa-lg"></i>
+  </button>
 </div>
 
 <ng-template #content let-modal>
-  <div class="modal-header">
-    <h1 class="modal-title" id="modal-basic-title">Share This Post!</h1>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <div class="modal-header">
+        <h1 class="modal-title" id="modal-basic-title">Share This Post!</h1>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
-  </div>
-  <div class="modal-body">
-    <share-buttons [show]="5"></share-buttons>
-  </div>
+    </div>
+    <div class="modal-body">
+        <share-buttons [show]="5"></share-buttons>
+    </div>
 </ng-template>
 
 <app-footer></app-footer>

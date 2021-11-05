@@ -47,6 +47,10 @@
       </ng-template>
     </swiper>
 </div>
+
+<div *ngIf="images?.length == 0" fxLayout="row wrap" fxLayoutAlign="center center">
+  <h3 style="text-align: center; font-family: Roboto; margin-top: 30px; margin-bottom: 30px;">Nothing to see here... YET!</h3>
+</div>
 <br>
 <br>
 

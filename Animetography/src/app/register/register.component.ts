@@ -2,7 +2,8 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ValidateService } from '../Services/validate.service';
-import { FlashMessagesService } from 'angular2-flash-messages';
+//import { FlashMessagesService } from 'angular2-flash-messages';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../Services/auth.service';
 import { Router } from '@angular/router';
 import { expand } from '../animations/app.animation';
@@ -29,8 +30,9 @@ export class RegisterComponent implements OnInit, AfterViewInit {
 	password: string;
 
   constructor(private validateService: ValidateService,
-    private flashMessage: FlashMessagesService,
+    //private flashMessage: FlashMessagesService,
     private authService: AuthService,
+    private toast: ToastrService,
     private router: Router
     ) { }
 
@@ -99,23 +101,23 @@ export class RegisterComponent implements OnInit, AfterViewInit {
 
   	//Required fields
   	if(!this.validateService.validateRegister(user)) {
-  		this.flashMessage.show('Please Fill in all Fields', {cssClass: 'alert-danger', timeout: 3000});
+  		this.toast.error('Please Fill in all Fields', 'Register');
   		return false;
   	}
 
   	//Required email validate
   	if(!this.validateService.validateEmail(user.email)) {
-  		this.flashMessage.show('A VALID Email ID is Required', {cssClass: 'alert-danger', timeout: 3000});
+  		this.toast.error('A VALID Email ID is Required', 'Register');
   		return false;
   	}
 
     //Register user
     this.authService.registerUser(user).subscribe(data => {
       if(data.success) {
-        this.flashMessage.show('You are now Registered and can Log In', {cssClass: 'alert-success', timeout: 3000});
+        this.toast.success('You are now Registered and can Log In', 'Register');
         this.router.navigate(['/login']);
       } else {
-        this.flashMessage.show('Something Went Wrong', {cssClass: 'alert-danger', timeout: 3000});
+        this.toast.warning('Something Went Wrong', 'Register');
         this.router.navigate(['/register']);
       }
     });

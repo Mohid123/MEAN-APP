@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../Services/auth.service';
 import { Router } from '@angular/router';
-import { FlashMessagesService } from 'angular2-flash-messages';
+import { ToastrService } from 'ngx-toastr';
 import { expand } from '../animations/app.animation';
 
 @Component({
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
   	private authService: AuthService,
-  	private flashMessage: FlashMessagesService,
+  	private toast: ToastrService,
   	private router: Router) { }
 
   ngOnInit(): void {
@@ -39,15 +39,15 @@ export class LoginComponent implements OnInit {
   		this.authService.authenticateUser(user).subscribe(data => {
   			if(data.success) {
 	  			this.authService.storeUserData(data.token, data.user);
-	  			this.flashMessage.show('You are logged in', {cssClass: 'alert-success', timeout: 3000});
+	  			this.toast.success('Log In', 'Successfully Logged In!');
 	  			this.router.navigate(['blog-preview']);
 	  		} else {
-	  			this.flashMessage.show(data.msg, {cssClass: 'alert-danger', timeout: 3000});
+	  			this.toast.warning('Log In', 'Login Failed. Something went wrong!');
 	  			this.router.navigate(['login']);
 	  		}
 	  	});
   	} else {
-  		this.flashMessage.show('Please fill in the form', {cssClass: 'alert-danger', timeout: 3000});
+  		this.toast.error('Log In', 'Please Fill in All fields!');
 	  	this.router.navigate(['login']);
 	  }
 	}

@@ -36,6 +36,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SwiperModule } from 'swiper/angular';
 import { EscapeHtmlPipe } from './Pipe/pipe.sanitize';
 import { Custom_Ng2SearchPipe } from './Pipe/serach.pipe';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -109,6 +110,7 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
     FormsModule,
     BrowserAnimationsModule,
     FlashMessagesModule.forRoot(),
+    ToastrModule.forRoot(),
     NgbModule,
     SwiperModule,
     FontAwesomeModule

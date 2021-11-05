@@ -1,7 +1,7 @@
 <app-header></app-header>
 <body>
-  <div [formGroup]="postForm" class="container" *ngIf="post">
-        <h1 class="mb-4">New blog post</h1>
+  <div [formGroup]="postForm" class="container" *ngIf="post" style="margin-bottom: 40px; margin-top: 40px;">
+        <h1 class="mb-4">Create New blog post</h1>
 
         <form [formGroup]="postForm" (ngsubmit)="onBlogSubmit()" enctype="multipart/form-data" method="post">
             <div class="form-group">
@@ -28,12 +28,9 @@
             <br>
             <div class="form-group">
                 <a routerLink="/blog-preview" class="btn btn-warning">Cancel</a>
+                &nbsp;
                 <button type="submit" class="btn btn-primary" (click)="onBlogSubmit()">Save</button>
             </div>
         </form>
     </div>
   </body>
-  <br>
-<br>
-<br>
-<br>
