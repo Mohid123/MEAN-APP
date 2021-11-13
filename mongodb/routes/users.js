@@ -165,7 +165,7 @@ router.get('/singlePost/:id',  function(req, res, next) {
   // }
 });
 
-router.post('/newPost', passport.authenticate('jwt', { session: false}), function(req, res, next) {
+router.post('/newPost', passport.authenticate('jwt', { session: false}), async function(req, res, next) {
   
   const newPost = new Post({
     postTitle: req.body.postTitle,
@@ -175,7 +175,7 @@ router.post('/newPost', passport.authenticate('jwt', { session: false}), functio
   });
   //console.log(createdPost);
 
-  Post.create(newPost, (err, user) => {
+ await Post.create(newPost, (err, user) => {
     if(err) {
       res.json({success: false, msg: 'Post failed to submit'});
     } else {
@@ -184,12 +184,12 @@ router.post('/newPost', passport.authenticate('jwt', { session: false}), functio
   })
 });
 
-router.put('/editPost/:id', passport.authenticate('jwt', { session: false}), function(req, res, next) {
+router.put('/editPost/:id', passport.authenticate('jwt', { session: false}), async function(req, res, next) {
   const id = req.params.id;
   console.log(id);
   const token = getToken(req.headers);
   if (token) {
-    Post.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+   await Post.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
       if (err) return next(err);
       res.json(post);
     });

@@ -28,7 +28,10 @@ mongoose.connect(config.database,{
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 app.use(cookieParser());
 
 //init gfs
