@@ -25,7 +25,6 @@
 </form>
 
 <div fxLayout="row wrap" fxLayoutAlign="center center">
-
     <div *ngFor="let post of posts | filter:searchText" fxLayout="column wrap" fxLayoutAlign="center center" class="main mat-elevation-z8">
 
         <div class="panel-image">
@@ -56,11 +55,12 @@
             <!-- <ckeditor [disabled]="true" [editor]="editor" [data]="post.postContent.length > 400 ? post.postContent.substring(0, 500)+'...' : post.postContent"></ckeditor> -->
             <span [innerHTML]="post.postContent.length > 300 ? post.postContent.substring(0, 400)+'...' : post.postContent"></span>
         </div>
+
         <br>
         <a [routerLink]="['/blog-page/', post._id]">
             <button type="button" name="button" class="btn btn-info btn-lg">
-          <img src="assets/reading-book.png" width="32" height="30"> Continue Reading
-        </button>
+                <img src="assets/reading-book.png" width="32" height="30"> Continue Reading
+            </button>
         </a>
 
         <div class="editorial">
@@ -73,21 +73,8 @@
 
             <a style="margin-left: 0.5em;"><button type="button" class="btn btn-dark" (click)="open(content)"><i class="fa fa-share-alt"></i></button></a>
         </div>
+
     </div>
-
-    <!--  <a class="twitter-timeline" data-width="400" data-height="900" data-theme="dark" href="https://twitter.com/AniMohid?ref_src=twsrc%5Etfw">Twitter Feed</a> -->
-
-</div>
-
-<!-- <div fxLayout="coulmn wrap" fxLayoutAlign="end center">
-  <a class="twitter-timeline" data-width="400" data-height="800" data-theme="dark" href="https://twitter.com/AniMohid?ref_src=twsrc%5Etfw">Tweets by Frol</a>
-</div>
-<br> -->
-
-<div fxLayout="row" fxLayoutAlign="end center" style="margin-bottom: 10px;">
-    <button mat-fab class="btn btn-info mat-elevation-z8" (click)="scrollToTop()" *ngIf="pageYoffset > 0">
-    <i class="fa fa-arrow-up fa-lg"></i>
-  </button>
 </div>
 
 <ng-template #content let-modal>

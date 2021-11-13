@@ -23,12 +23,6 @@ import { Post } from '../post/post';
   // ]
 })
 export class BlogPageComponent implements OnInit {
-
-  pageYoffset = 0;
-  @HostListener('window:scroll', ['$event']) onScroll(event){
-    this.pageYoffset = window.pageYOffset;
-  }
-
   Loading = false;
   closeResult = '';
   searchText;
@@ -78,10 +72,6 @@ export class BlogPageComponent implements OnInit {
     });
 
   }
-
-  scrollToTop(){
-    this.scroll.scrollToPosition([0,0]);
-}
 
   getPostbyId(id: any) {
     this.spinner.show();

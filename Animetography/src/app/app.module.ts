@@ -37,6 +37,8 @@ import { SwiperModule } from 'swiper/angular';
 import { EscapeHtmlPipe } from './Pipe/pipe.sanitize';
 import { Custom_Ng2SearchPipe } from './Pipe/serach.pipe';
 import { ToastrModule } from 'ngx-toastr';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { SpinnersAngularModule } from 'spinners-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,6 +58,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { CreateImageComponent } from './create-image/create-image.component';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+import { ScrollTopComponent } from './scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -72,11 +75,14 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
     ArchiveComponent,
     CreateImageComponent,
     BlogPreviewComponent,
+    ScrollTopComponent,
     EscapeHtmlPipe,
     Custom_Ng2SearchPipe
   ],
   imports: [
     BrowserModule,
+    InfiniteScrollModule,
+    SpinnersAngularModule,
     AppRoutingModule,
     MatCarouselModule,
     ReadMoreModule,

@@ -26,11 +26,6 @@ import { expand } from '../animations/app.animation';
 })
 export class BlogPreviewComponent implements OnInit {
 
-  pageYoffset = 0;
-  @HostListener('window:scroll', ['$event']) onScroll(event){
-    this.pageYoffset = window.pageYOffset;
-  }
-
   Loading = false;
   closeResult = '';
   id: '';
@@ -52,14 +47,16 @@ export class BlogPreviewComponent implements OnInit {
   {'image': '/assets/symbolic.png', 'text': 'Visual Motifs'},
   {'image': '/assets/blockA.png', 'text': 'Blocking and Staging'}];
 
-  constructor(private postService: PostService,
+  constructor(
+    private postService: PostService,
     private authService: AuthService,
     private router: Router,
     private modalService: NgbModal,
     private toast: ToastrService,
     private activatedRoute: ActivatedRoute,
     private spinner: NgxSpinnerService,
-    private scroll: ViewportScroller) { }
+    private scroll: ViewportScroller
+    ) { }
 
   ngOnInit(): void {
 
@@ -81,13 +78,7 @@ export class BlogPreviewComponent implements OnInit {
       this.username = profile.user.username;
     });
 
-    //(<any>window).twttr.widgets.load();
-
   }
-
-  scrollToTop(){
-    this.scroll.scrollToPosition([0,0]);
-}
 
 
   open(content) {
