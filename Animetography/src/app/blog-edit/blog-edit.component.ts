@@ -20,6 +20,7 @@ export class BlogEditComponent implements OnInit {
 	postTitle = '';
   postContent = '';
   postImgUrl = '';
+  postAuthor = '';
   public editor = Editor;
   config;
 
@@ -40,7 +41,8 @@ export class BlogEditComponent implements OnInit {
   	this.postForm = this.formBuilder.group({
       postTitle : [null],
       postContent : [null],
-      postImgUrl : [null]
+      postImgUrl : [null],
+      postAuthor : [null]
     });
   	// this.postService.getPost(this.currentUrl.id).subscribe(
    //    data => {
@@ -134,7 +136,8 @@ export class BlogEditComponent implements OnInit {
       this.postForm.setValue({
         postTitle: data.postTitle,
         postContent: data.postContent,
-        postImgUrl: data.postImgUrl
+        postImgUrl: data.postImgUrl,
+        postAuthor: data.postAuthor
       });
     });
   }

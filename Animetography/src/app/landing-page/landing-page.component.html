@@ -1,32 +1,36 @@
 <section class="showcase">
-	<img class="logo" src="assets/logo.png" alt="site logo">
-	<video src="assets/Hibike_2.mp4" onloadedmetadata="this.muted=true" autoplay loop preload="auto"></video>
+    <img class="logo" src="assets/logo.png" alt="site logo">
+    <video src="assets/Hibike_2.mp4" onloadedmetadata="this.muted=true" autoplay loop preload="auto"></video>
 
-	<div class="overlay"></div>
+    <div class="overlay"></div>
 
-	<div class="text">
-		<h2 class="wel">Storytelling Techniques in Animation</h2>
-		<br>
-		<a class="explore" mat-button routerLink='/blog-preview'>
-			<span class="fa fa-book fa-lg"></span> Go to Blog</a>
-		<!-- <a class="log" *ngIf="!authService.loggedin()" mat-button routerLink='/login'>
+    <div class="text">
+        <h3 class="wel">Storytelling Techniques in Animation</h3>
+        <br>
+        <a class="explore" mat-button routerLink='/blog-preview'>
+            <span class="fa fa-book fa-lg"></span> Go to Blog</a>
+        <!-- <a class="log" *ngIf="!authService.loggedin()" mat-button routerLink='/login'>
 			<span class="fa fa-sign-in fa-lg"></span> Login</a> -->
-	</div>
+    </div>
 
-	<ul class="social">
-		<li><a href="https://twitter.com/AniMohid" target="_blank"><img src="assets/twitter.png" height="34" width="34" title="Connect on Twitter!"></a></li>
-		<li><a (click)="open(content)" style="cursor: pointer;"><img src="assets/share.png" height="30" width="30" title="Share"></a></li>
-	</ul>
+    <ul class="social">
+        <li>
+            <a href="https://twitter.com/AniMohid" target="_blank"><img src="assets/twitter.png" height="34" width="34" title="Connect on Twitter!"></a>
+        </li>
+        <li>
+            <a (click)="open(content)" style="cursor: pointer;"><img src="assets/share.png" height="30" width="30" title="Share"></a>
+        </li>
+    </ul>
 </section>
 
 <ng-template #content let-modal>
-  <div class="modal-header" style="padding: 20px 20px 20px 20px;">
-    <h1 class="modal-title" id="modal-basic-title">Share!</h1>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    <div class="modal-header" style="padding: 20px 20px 20px 20px;">
+        <h5 class="modal-title" id="modal-basic-title">Share the blog!</h5>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
-  </div>
-  <div class="modal-body">
-    <share-buttons [show]="5"></share-buttons>
-  </div>
+    </div>
+    <div class="modal-body">
+        <share-buttons [show]="5"></share-buttons>
+    </div>
 </ng-template>

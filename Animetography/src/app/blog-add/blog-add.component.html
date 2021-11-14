@@ -1,13 +1,14 @@
 <app-header></app-header>
+
 <body>
-  <div [formGroup]="postForm" class="container" *ngIf="post" style="margin-bottom: 40px; margin-top: 40px;">
-        <h1 class="mb-4">Create New blog post</h1>
+    <div [formGroup]="postForm" class="container" *ngIf="post" style="margin-bottom: 40px; margin-top: 40px;">
+        <h4 class="mb-4">Create New blog post</h4>
 
         <form [formGroup]="postForm" (ngsubmit)="onBlogSubmit()" enctype="multipart/form-data" method="post">
             <div class="form-group">
 
                 <label for="postImgUrl">Image</label>
-                <input formControlName="postImgUrl" type="text" class="form-control"  name="image" required>
+                <input formControlName="postImgUrl" type="text" class="form-control" name="image" required>
             </div>
 
             <div class="form-group">
@@ -23,14 +24,13 @@
             </div>
             <br>
             <div class="form-group">
-              <ckeditor formControlName="postContent" name="postContent" [editor]="editor" [config]="config"></ckeditor>
+                <ckeditor formControlName="postContent" name="postContent" [editor]="editor" [config]="config"></ckeditor>
             </div>
             <br>
             <div class="form-group">
-                <a routerLink="/blog-preview" class="btn btn-warning">Cancel</a>
-                &nbsp;
+                <a routerLink="/blog-preview" class="btn btn-warning">Cancel</a> &nbsp;
                 <button type="submit" class="btn btn-primary" (click)="onBlogSubmit()">Save</button>
             </div>
         </form>
     </div>
-  </body>
+</body>

@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <ngx-spinner bdColor="rgba(0,0,0)" size="medium" color="#0087d3" type="line-scale-pulse-out" [fullScreen]="true">
-    <p style="color: white"> Loading Blogs... </p>
+    <p style="color: white"> Loading Posts... </p>
 </ngx-spinner>
 
 <mat-carousel timings="500ms ease-in" [autoplay]="true" [interval]="3000" color="accent" maxWidth="auto" [proportion]="43" [slides]="6" [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useMouseWheel]="false" orientation="ltr">
@@ -75,11 +75,22 @@
         </div>
 
     </div>
+
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+    <p style="font-size: 1.2em;">Follow me on Twitter!</p>
+</div>
+<div class="twitter" fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+    <a class="twitter-timeline" data-width="400" data-height="600" data-theme="light" href="https://twitter.com/AniMohid?ref_src=twsrc%5Etfw">Tweets by AniMohid</a>
+    <article class="calendar-wrapper">
+        <igx-calendar></igx-calendar>
+    </article>
 </div>
 
 <ng-template #content let-modal>
     <div class="modal-header">
-        <h1 class="modal-title" id="modal-basic-title">Share Posts!</h1>
+        <h5 class="modal-title" id="modal-basic-title">Share Posts!</h5>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>

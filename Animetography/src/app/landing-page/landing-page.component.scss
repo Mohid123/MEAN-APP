@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
 @import '../../../node_modules/font-awesome/scss/font-awesome';
-
 $primary-color-dark: #c49000;
 $primary-color: #fbc02d;
 $primary-color-light: #fff263;
@@ -9,131 +8,130 @@ $background-light: #ffffa8;
 $primary-color-text: #FFFFFF;
 $accent-color: #a0af22;
 $divider-color: #e6ee9c;
-
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
     padding: $pad-up-down $pad-left-right;
 }
 
-*{
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .showcase {
-	position: absolute;
-	right: 0;
-	width: 100%;
-	min-height: 100vh;
-	padding: 100px;
-	display: flex;
-	z-index: 2;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    z-index: 2;
 }
 
 .logo {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 230px;
-	height: 230px;
-	z-index: 1000;
-	display: flex;
-	justify-content: space-between;
-	// filter: invert(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 230px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    // filter: invert(100%);
 }
 
 .showcase video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .logo {
-	cursor: pointer;
-	color: floralwhite;
+    cursor: pointer;
+    color: floralwhite;
 }
 
 .text {
-	position: relative;
-	z-index: 10;
-	color: floralwhite;
-	margin-top: 190px;
+    position: relative;
+    z-index: 10;
+    color: floralwhite;
+    margin-top: 190px;
 }
 
-.text h2 {
-	font-size: 4.2em;
-	line-height: 1em;
-	font-weight: 800;
-	font-family: 'Caveat', sans-serif;
+.text h3 {
+    font-size: 4em;
+    line-height: 1em;
+    font-weight: 800;
+    font-family: 'Caveat', sans-serif;
 }
 
 .text a {
-	display: inline-block;
-	font-size: 1.2em;
-	color: floralwhite;
-	font-family: 'Roboto', sans-serif;
-	background: $accent-color;
-	padding: 6px 14px;
-	text-decoration: none;
-	margin-top: 10px;
-	text-transform: uppercase;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: 0.2s;
-	margin-right: 5px;
+    display: inline-block;
+    font-size: 1.2em;
+    color: floralwhite;
+    font-family: 'Roboto', sans-serif;
+    background: $accent-color;
+    padding: 6px 14px;
+    text-decoration: none;
+    margin-top: 10px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 5px;
 }
 
 .explore {
-	background-color: #E91E63!important;
-	box-shadow: 0 9px #999;
-	border: none;
-	outline: none;
+    background-color: #E91E63!important;
+    box-shadow: 0 9px #999;
+    border: none;
+    outline: none;
 }
 
 .explore:hover {
-	background-color: #8e24aa!important;
+    background-color: #8e24aa!important;
 }
 
 .explore:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .social {
-	position: absolute;
-	bottom: 20px;
-	z-index: 10;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social li {
-	list-style: none;
-	filter: invert(1);
-	margin-right: 20px;
-	transform: scale(1.2);
-	transition: 0.5s;
+    list-style: none;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(1.2);
+    transition: 0.5s;
 }
 
 .social li:hover {
-	transform: scale(1.2) translateY(-6px);
+    transform: scale(1.2) translateY(-6px);
 }
 
 .modal-title {
-	font-family: 'Dosis', sans-serif;
-	text-align: center;
-	font-weight: 500;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    font-weight: 500;
 }

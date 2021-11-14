@@ -78,6 +78,8 @@ export class BlogPreviewComponent implements OnInit {
       this.username = profile.user.username;
     });
 
+    (<any>window).twttr.widgets.load();
+
   }
 
 

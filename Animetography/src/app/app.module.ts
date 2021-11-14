@@ -18,7 +18,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
@@ -39,6 +39,7 @@ import { Custom_Ng2SearchPipe } from './Pipe/serach.pipe';
 import { ToastrModule } from 'ngx-toastr';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { SpinnersAngularModule } from 'spinners-angular';
+import { IgxCalendarModule, IgxDialogModule } from 'igniteui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -81,6 +82,8 @@ import { ScrollTopComponent } from './scroll/scroll.component';
   ],
   imports: [
     BrowserModule,
+    IgxCalendarModule,
+    IgxDialogModule,
     InfiniteScrollModule,
     SpinnersAngularModule,
     AppRoutingModule,
@@ -122,11 +125,13 @@ import { ScrollTopComponent } from './scroll/scroll.component';
     FontAwesomeModule
   ],
   providers: [
-  ValidateService,
-  PostService,
-  AuthService,
-  AuthGuard],
+    ValidateService,
+    PostService,
+    AuthService,
+    AuthGuard
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
