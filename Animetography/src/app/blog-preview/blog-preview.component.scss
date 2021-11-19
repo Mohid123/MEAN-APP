@@ -1,7 +1,7 @@
-@import '../../../node_modules/font-awesome/scss/font-awesome';
-@import 'https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap';
-@import '~ngx-sharebuttons/themes/default/default-theme';
-@import 'https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap';
+@import "../../../node_modules/font-awesome/scss/font-awesome";
+@import "https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap";
+@import "~ngx-sharebuttons/themes/default/default-theme";
+@import "https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap";
 .main {
     padding-top: 4%;
     z-index: 1000;
@@ -24,7 +24,7 @@
 }
 
 .panel-title {
-    font-family: 'Mukta', sans-serif;
+    font-family: "Mukta", sans-serif;
     font-weight: 700;
     font-size: 2.1em;
     text-align: center;
@@ -33,13 +33,13 @@
 }
 
 .panel-author {
-    font-family: 'Mukta', sans-serif;
+    font-family: "Mukta", sans-serif;
     font-size: 1.2em;
     text-align: center;
 }
 
 .panel-body {
-    font-family: 'Mukta', sans-serif;
+    font-family: "Mukta", sans-serif;
     font-size: 1.3em;
     letter-spacing: 0.1em;
     line-height: 1.6;
@@ -57,7 +57,7 @@
 }
 
 .modal-title {
-    font-family: 'Mukta', sans-serif;
+    font-family: "Mukta", sans-serif;
     text-align: center;
     font-weight: 500;
 }
@@ -66,7 +66,7 @@
     width: 100%;
     padding-bottom: 5px;
     text-align: center;
-    font-family: 'Dosis', sans-serif;
+    font-family: "Dosis", sans-serif;
     font-weight: 600;
     background-color: #263238;
     color: white;
@@ -75,7 +75,7 @@
 .example-full-width {
     width: 100%;
     text-align: center;
-    font-family: 'Dosis', sans-serif;
+    font-family: "Dosis", sans-serif;
     font-weight: 600;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .panel-title:hover {
-    color: #E91E63;
+    color: #e91e63;
 }
 
 .btn-outline-success img {
@@ -97,13 +97,12 @@
     color: white;
     padding: 10px;
     font-weight: 500;
-    font-family: 'Dosis';
+    font-family: "Dosis";
     font-size: 5vw;
 }
 
 .calendar-wrapper {
-    max-width: 600px;
-    min-width: 500px;
+    width: 50em;
     border: 1px solid pink;
     border-radius: 6px;
     margin: 8px;
