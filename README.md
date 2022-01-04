@@ -28,7 +28,7 @@ Mobile View
 
 Basic Website Features:
 * A video background landing page with text animation made using [animejs](https://animejs.com/).
-* A beautiful preview page for all the blogs feaured on the website complete with animated preloader.
+* A blog preview page for all the blogs feaured on the website complete with animated preloader.
 * A page dedicated to reading a particular blog post once clicked.
 * An image gallery featuring all the images used in the posts with captions.
 * A search bar that allows you to filter blog posts based on what you want to read, old or new...
