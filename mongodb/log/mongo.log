@@ -66,3 +66,15 @@
 {"t":{"$date":"2021-08-23T14:29:09.260+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
 {"t":{"$date":"2021-08-23T14:29:09.425+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service '{toUtf8String_serviceName}'","attr":{"toUtf8String_serviceName":"MongoDB"}}
 {"t":{"$date":"2021-08-23T14:29:09.452+05:00"},"s":"I",  "c":"CONTROL",  "id":23300,   "ctx":"main","msg":"There is already a service named '{toUtf8String_serviceName}{retryCount_0_sleeping_and_retrying_aborting}","attr":{"toUtf8String_serviceName":"MongoDB","retryCount_0_sleeping_and_retrying_aborting":"', sleeping and retrying"}}
+
+{"t":{"$date":"2022-01-16T20:06:31.659+05:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"-","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2022-01-16T20:06:31.677+05:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"-","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":13},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":13},"outgoing":{"minWireVersion":0,"maxWireVersion":13},"isInternalClient":true}}}
+{"t":{"$date":"2022-01-16T20:06:32.656+05:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2022-01-16T20:06:32.661+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2022-01-16T20:06:32.662+05:00"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"main","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2022-01-16T20:06:32.667+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2022-01-16T20:06:32.691+05:00"},"s":"W",  "c":"ASIO",     "id":22601,   "ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+{"t":{"$date":"2022-01-16T20:06:32.694+05:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","ns":"config.tenantMigrationDonors"}}
+{"t":{"$date":"2022-01-16T20:06:32.694+05:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","ns":"config.tenantMigrationRecipients"}}
+{"t":{"$date":"2022-01-16T20:06:32.695+05:00"},"s":"I",  "c":"CONTROL",  "id":23298,   "ctx":"main","msg":"Trying to install Windows service","attr":{"serviceName":"MongoDB"}}
+{"t":{"$date":"2022-01-16T20:06:32.695+05:00"},"s":"I",  "c":"CONTROL",  "id":23299,   "ctx":"main","msg":"Error connecting to the Service Control Manager","attr":{"__error__":"Access is denied. (5)"}}

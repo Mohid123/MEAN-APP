@@ -9,14 +9,7 @@ declare var anime: any;
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss'],
-  host: {
-    '[@flyinout]': 'true',
-    'style': 'display: block;'
-  },
-  animations: [
-  flyinout()
-  ]
+  styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
   closeResult = '';

@@ -22,14 +22,7 @@ declare var anime: any;
    selector: 'app-archive',
    templateUrl: './archive.component.html',
    styleUrls: ['./archive.component.scss'],
-   host: {
-    '[@flyinout]': 'true',
-    'style': 'display: block;'
-  },
-  animations: [
-  flyinout()
-  ],
-  encapsulation: ViewEncapsulation.None
+   encapsulation: ViewEncapsulation.None
  })
  export class ArchiveComponent implements OnInit, OnDestroy {
 

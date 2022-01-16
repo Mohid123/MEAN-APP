@@ -39,7 +39,6 @@ export class HeaderComponent implements OnInit {
 
   onLogoutClick() {
     this.authService.logout();
-    this.toast.warning('Log Out', 'You are logged out');
     this.router.navigate(['login']);
     return false;
   }

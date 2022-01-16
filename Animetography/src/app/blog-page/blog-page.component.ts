@@ -8,19 +8,11 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerService } from "ngx-spinner";
 import * as Editor from '../ckeditor5/build/ckeditor';
 import { Post } from '../post/post';
-// import { flyinout } from '../animations/app.animation';
 
 @Component({
   selector: "app-blog-page",
   templateUrl: "./blog-page.component.html",
   styleUrls: ["./blog-page.component.scss"]
-  // host: {
-  //   '[@flyinout]': 'true',
-  //   'style': 'display: block;'
-  // },
-  // animations: [
-  // flyinout()
-  // ]
 })
 export class BlogPageComponent implements OnInit {
   Loading = false;

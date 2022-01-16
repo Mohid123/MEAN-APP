@@ -6,22 +6,22 @@
             <form (submit)="onLoginSubmit()">
                 <p class="h2 mb-4 text-left">Login to continue</p>
                 <label for="mail" class="in">Username</label>
-                <input type="email" class="form-control mb-4" placeholder="Enter Username" [(ngModel)]="username" name="username">
+                <input type="email" class="form-control mb-4 w-100" placeholder="Enter Username" [(ngModel)]="username" name="username">
                 <label for="pass" class="in">Password</label>
-                <input type="password" class="form-control mb-4" placeholder="Enter Password" [(ngModel)]="password" name="password">
+                <input type="password" class="form-control mb-4 w-100" placeholder="Enter Password" [(ngModel)]="password" name="password">
                 <div class="d-flex justify-content-left">
                     <div>
-                        <div class="custom-control custom-checkbox text-left">
+                        <div class="custom-control custom-checkbox text-left mt-5">
                             <mat-checkbox [(ngModel)]="checked" name="checked" style="font-family: 'Caveat', sans-serif; font-size: 18px;">Remember me</mat-checkbox>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-success btn-block " type="submit">LOGIN</button>
+                <button class="btn btn-success btn-block mt-3" [disabled]="!username || !password" type="submit">LOGIN</button>
                 <!-- <button class="btn btn-link btn-block my" type="submit">Forgot Password?</button> -->
             </form>
         </div>
         <div class="col-sm-8 xyz text-center" style="background-image: url('../../assets/loginbg.jpg'); background-size: cover;">
-            <i class="fa fa-user-circle fa-5x" aria-hidden="true" style="color: #004d40;"></i>
+            <i class="fa fa-user-circle fa-5x" aria-hidden="true" style="color: #004d40; margin-top: 10%;"></i>
             <br>
             <br>
             <h5 class="account-text">Create Your Account</h5>

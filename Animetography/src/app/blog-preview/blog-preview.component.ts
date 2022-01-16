@@ -9,20 +9,11 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerService } from "ngx-spinner";
 import { ToastrService } from 'ngx-toastr';
 import * as Editor from '../ckeditor5/build/ckeditor';
-import { Observable, Subscription } from 'rxjs';
-import { expand } from '../animations/app.animation';
 
 @Component({
   selector: 'app-blog-preview',
   templateUrl: './blog-preview.component.html',
-  styleUrls: ['./blog-preview.component.scss'],
-  host: {
-    '[@expand]': 'true',
-    'style': 'display: block;'
-  },
-  animations: [
-  expand()
-  ]
+  styleUrls: ['./blog-preview.component.scss']
 })
 export class BlogPreviewComponent implements OnInit {
 
