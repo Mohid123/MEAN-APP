@@ -1,6 +1,6 @@
 # Animetography-Blog
 
-## (&#x1F534;THIS PROJECT IS BEING SHIFTED TO A NEST JS BACKEND AND ANGULAR 14.(&#x1F534;
+## &#x1F534;THIS PROJECT IS BEING SHIFTED TO A NEST JS BACKEND AND ANGULAR 14.&#x1F534;
 
 Animetography-Blog is a full stack blogging website developed from front to back using the MEAN Stack.
 
