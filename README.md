@@ -1,8 +1,6 @@
 # Animetography-Blog
 
-## &#x1F534;THIS PROJECT IS BEING SHIFTED TO Angular 14 AND NestJS.&#x1F534;
-
-Animetography-Blog is a full stack blogging website developed from front to back using the MEAN Stack.
+### This project has been archived and is being refactored and revamped in Angular 15 and NestJS.
 
 ## Preview-Images
 
